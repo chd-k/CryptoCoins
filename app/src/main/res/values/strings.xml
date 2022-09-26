@@ -8,4 +8,5 @@
     <string name="icon_description">Coin\'s icon</string>
     <string name="description_heading">Описание</string>
     <string name="categories_heading">Категории</string>
+    <string name="image_in_list_description">Coin`s icon</string>
 </resources>

@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">CryptoCoins</string>
+    <string name="usd">USD</string>
+    <string name="eur">EUR</string>
+    <string name="error_text">Случилась какая-то ошибка :( \nПопробуем снова?</string>
+    <string name="retry_button_text">ПОПРОБОВАТЬ</string>
+    <string name="image_view_description">Bitcoins\'s icon</string>
+    <string name="icon_description">Coin\'s icon</string>
+    <string name="description_heading">Описание</string>
+    <string name="categories_heading">Категории</string>
+</resources>

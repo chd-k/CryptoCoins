@@ -8,6 +8,7 @@ import com.anastasiiagribovskaya.cryptocoins.databinding.ItemCoinsListBinding
 
 class CoinsListAdapter(
     private val coins: List<Coin>,
+    private val onCoinClicked: () -> Unit
     ) : RecyclerView.Adapter<CoinsListHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CoinsListHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -17,14 +18,14 @@ class CoinsListAdapter(
 
     override fun onBindViewHolder(holder: CoinsListHolder, position: Int) {
         val coin = coins[position]
-        holder.bind(coin)
+        holder.bind(coin, onCoinClicked)
     }
 
     override fun getItemCount() = coins.size
 }
 
 class CoinsListHolder(private val binding: ItemCoinsListBinding) : RecyclerView.ViewHolder(binding.root) {
-    fun bind(coin: Coin) {
+    fun bind(coin: Coin, onCoinClicked: () -> Unit) {
         val percentage = coin.price_change_percentage_24h
         binding.apply {
             textViewCoin.text = coin.id.replaceFirstChar { it.uppercase() }
@@ -34,6 +35,9 @@ class CoinsListHolder(private val binding: ItemCoinsListBinding) : RecyclerView.
             textViewPercentage.setTextColor(if (percentage < 0)
                 ContextCompat.getColor(binding.root.context, R.color.red)
                 else ContextCompat.getColor(binding.root.context, R.color.green))
+            root.setOnClickListener {
+                onCoinClicked()
+            }
         }
     }
 

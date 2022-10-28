@@ -32,6 +32,7 @@
         android:minHeight="?attr/actionBarSize"
         android:textAlignment="viewEnd"
         android:theme="?attr/actionBarTheme"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"

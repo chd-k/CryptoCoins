@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coinsListFragment">
+
+    <fragment
+        android:id="@+id/coinsListFragment"
+        android:name="com.anastasiiagribovskaya.cryptocoins.CoinsListFragment"
+        android:label="fragment_coins_list"
+        tools:layout="@layout/fragment_coins_list" >
+        <action
+            android:id="@+id/action_coinsListFragment_to_coinDetailFragment"
+            app:destination="@id/coinDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/coinDetailFragment"
+        android:name="com.anastasiiagribovskaya.cryptocoins.CoinDetailFragment"
+        android:label="fragment_coin_detail"
+        tools:layout="@layout/fragment_coin_detail" />
+    <fragment
+        android:id="@+id/errorCoinDetailFragment"
+        android:name="com.anastasiiagribovskaya.cryptocoins.ErrorCoinDetailFragment"
+        android:label="ErrorCoinDetailFragment"
+        tools:layout="@layout/fragment_error_coin_detail"/>
+    <fragment
+        android:id="@+id/errorCoinsListFragment"
+        android:name="com.anastasiiagribovskaya.cryptocoins.ErrorCoinsListFragment"
+        android:label="fragment_error_coins_list"
+        tools:layout="@layout/fragment_error_coins_list" />
+</navigation>
